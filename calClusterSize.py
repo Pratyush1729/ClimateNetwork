@@ -27,7 +27,7 @@ def calClusterSize(rowNo, week, year):
 temp = []	
 
 
-def calClustersForYear(year):
+for year in range(3):
 	for week in range(345):
 		for loc1 in range(357): 
 			if (covered[loc1] == 0):
@@ -37,6 +37,3 @@ def calClustersForYear(year):
 		clusterSize.append(temp)
 		temp = []	
 		covered = np.zeros(357, dtype=int)			
-def add(a, b):
-	return a+b
-	
