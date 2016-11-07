@@ -24,10 +24,10 @@ def calClusterSize(rowNo, week, year):
 			else :
 				count = count + 1	
 	return count
-temp = []	
+temp = set()
 
 
-for year in range(3):
+def calClusterForYear(year):
 	for week in range(345):
 		for loc1 in range(357): 
 			if (covered[loc1] == 0):
