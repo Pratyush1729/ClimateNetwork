@@ -1,3 +1,4 @@
+#Calculating graph by setting the threshold value for correlation to 0.95. So, for any two nodes if the correlation value exceeds 0.95, we have an edge. 
 import numpy as np
 from scipy.stats.stats import pearsonr 
 import matplotlib.pyplot as plt
@@ -5,7 +6,6 @@ import time
 from mpi4py import MPI
 comm = MPI.COMM_WORLD
 #thData = np.ndarray(shape=(110, 346, 2), dtype=float) #holds the lth index and rth index for a given location for a given seven day period 
-
 thData = np.load(open("corTh11AvgYearData"))
 linArray = np.ndarray(shape=(357*356/2, 1), dtype=float)
 probMat = np.ndarray(shape=(1000, 1), dtype=float)
